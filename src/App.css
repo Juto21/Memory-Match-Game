@@ -3,15 +3,16 @@
 }
 
 .card-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(6, 150px); /* Empat kolom dengan lebar 80px masing-masing */
+  grid-gap: 90px; /* Peningkatan jarak antara kartu menjadi 20px */
   justify-content: center;
 }
 
+
 .card {
-  width: 80px;
-  height: 80px;
-  margin: 10px;
+  width: 200px;
+  height: 200px;
   font-size: 24px;
   font-weight: bold;
   display: flex;
@@ -20,14 +21,101 @@
   background-color: #e0e0e0;
   cursor: pointer;
   user-select: none;
+  transition: transform 0.3s ease;
+  
 }
 
 .card.flipped {
   background-color: #fff;
+  transform: rotateY(360deg);
 }
+
+.card.back {
+  background-color: purple;
+}
+
+.restart-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 10px;
+}
+
+/* App.css */
+.restart-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 2px;
+  transition: transform 0.2s ease; /* Transisi untuk efek transform selama 0.2 detik */
+}
+
+.button-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.restart-button img {
+  width: 80px; /* Sesuaikan ukuran gambar */
+  height: 80px;
+  margin-bottom: 5px; /* Jarak antara gambar dan teks */
+}
+
+.restart-button span {
+  font-size: 14px; /* Sesuaikan ukuran teks */
+  font-weight: bold;
+}
+
+.restart-button:hover {
+  transform: scale(1.1); /* Efek zoom saat tombol dihover */
+}
+
+.restart-button:active {
+  transform: scale(0.9); /* Efek zoom saat tombol diklik */
+}
+
+/* App.css */
+@keyframes moveText {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.game-title {
+  animation: moveText 3s infinite; /* Animasi bergerak selama 3 detik secara terus menerus */
+    font-family: 'Fredoka One', sans-serif;
+    color: #ff00cc; /* Ganti dengan kode warna atau nama warna yang diinginkan */
+    font-size: 36px;
+  }
+
+
 
 .App-link {
   color: #61dafb;
+}
+body {
+  background-image: url('D:/kulyah/Program interactive system/asset/hutan.jpg'); /* Ganti dengan path gambar Anda */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0; /* Hapus margin default yang diberikan oleh browser */
+  height: 100vh; /* Set tinggi latar belakang ke tinggi viewport */
+  overflow: hidden; /* Hindari overflow jika ada konten lebih besar dari viewport */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Mempertahankan tinggi layar penuh */
+  margin: 0; /* Menghilangkan margin bawaan dari body */
 }
 
 @keyframes App-logo-spin {
