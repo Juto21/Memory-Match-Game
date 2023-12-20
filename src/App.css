@@ -43,15 +43,6 @@
   background-color: purple;
 }
 
-
-
-
-
-
-
-
-
-
 .restart-button {
   background: none;
   border: none;
@@ -60,7 +51,7 @@
   margin: 10px;
 }
 
-/* App.css */
+
 .restart-button {
   background: none;
   border: none;
@@ -121,7 +112,7 @@
   color: #61dafb;
 }
 body {
-  background-image: url('D:/kulyah/Program interactive system/asset/hutan.jpg'); /* Ganti dengan path gambar Anda */
+  background-image: url('/public/images/hutan.jpg'); /* Ganti dengan path gambar Anda */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
