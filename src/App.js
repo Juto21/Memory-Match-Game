@@ -14,11 +14,12 @@ const App = () => {
   const [matchedPairs, setMatchedPairs] = useState([]);
   
   const handleRestart = () => {
-    setCards(generateCards());
+    // Logika untuk mengacak ulang posisi kartu
+    const newCards = generateCards();
+    setCards(newCards);
     setFlippedIndices([]);
     setMatchedPairs([]);
   };
-
 
   useEffect(() => {
     if (flippedIndices.length === 2) {
@@ -36,6 +37,7 @@ const App = () => {
       setFlippedIndices([...flippedIndices, index]);
     }
   };
+
 
 
   return (
