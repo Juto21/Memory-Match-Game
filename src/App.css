@@ -25,6 +25,15 @@
   
 }
 
+.card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Efek bayangan saat hover */
+  background-color: #ccc; /* Perubahan warna saat hover */
+}
+
+.card.flipped {
+  background-color: #fff;
+}
+
 .card.flipped {
   background-color: #fff;
   transform: rotateY(360deg);
@@ -33,6 +42,15 @@
 .card.back {
   background-color: purple;
 }
+
+
+
+
+
+
+
+
+
 
 .restart-button {
   background: none;
